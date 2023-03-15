@@ -100,7 +100,7 @@ function App() {
 
 
           <form className={styles.formulario} onSubmit={id ? editar : adicionar}>
-          <h3 className={styles.title}> Filmes para assistir </h3>
+          <h3 className={styles.title}> Adicione filmes para assistir </h3>
             <input className={styles.input}
               required
               value={titulo}
@@ -119,9 +119,9 @@ function App() {
               <option value="Terror">Terror</option>
             </select>
 
-            <input className={styles.input} requered value={descricao} type="textarea"
+            <input className={styles.input} required value={descricao} type="textarea"
               placeholder="Descricao" onChange={(event) => setDescricao(event.target.value)} />
-            <input className={styles.input} requered value={data} type="date"
+            <input className={styles.input} required value={data} type="date"
               placeholder="Data" onChange={(event) => setData(event.target.value)} />
 
             <input className={styles.submit} type="submit" value={id ? "Salvar" : "Cadastrar"} />
@@ -129,6 +129,9 @@ function App() {
 
           </form>
         </div>
+
+      <h2 className={styles.tituloPagina}>Filmes</h2>
+
       </container>
 
       {/*retorno de dados salvos*/}
@@ -148,7 +151,7 @@ function App() {
             ))}
           </ul>
         ) : (
-          <p >Nenhuma categoria cadastrada</p>
+          <p className={styles.vazio} >Nenhuma categoria cadastrada</p>
         )}
 
     </div>

@@ -81,28 +81,38 @@
     background: #534bf3;
 }
 
+
+.tituloPagina{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    width: 250%;
+    height: 15%;
+    
+}
+.vazio{
+    padding-left: 2%;
+    position: relative;  
+    left: 529px;
+    top: 129px;  
+}
+
 /* ----------------------O QUE SERÀ--------------------------------------- */
 
 .card {
-    width: 190px;
-    height: 254px;
-    border-radius: 30px;
+    
+    border-radius: 5px;
     background: lightgrey;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-
-    flex-direction: row;
-    padding-left: 2%;
+    padding-top: 1rem;
+    padding-left: 2rem ;
     position: relative;
-    width: 60%;
-    height: 110px;
+    width: 55rem;
+    height: 114px;
     left: 529px;
     top: 129px;
     margin: 20px;
     list-style: none;
-    /* background: #FFFFFF; */
-    /* border: 1px solid #C7C4C4; */
-    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
-    /* border-radius: 12px; */
 }
 
 .data {
@@ -122,13 +132,14 @@
     position: absolute;
     right: 30px;
     margin-right: 20px;
+    
     size: 50px;
     height: 30px;
     width: 30px;
     cursor: pointer;
     font-size: 1.6rem;
     color: blue;
-    background: lightgrey;
+    background: none;
     border: 0;
 
 }
@@ -145,7 +156,7 @@
     font-size: 1.6rem;
     color: red;
     border: 0;
-    background: lightgrey;
+    background: none;
 
 
 }
