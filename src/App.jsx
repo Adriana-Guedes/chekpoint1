@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./style.module.css"
+import { BsTrash2 } from 'react-icons/bs';
+import { AiOutlineEdit } from 'react-icons/ai';
 
 function App() {
 
@@ -93,61 +95,62 @@ function App() {
     <div className={styles.app}>
       <container className={styles.container}>
 
-      <div className={styles.form}>
-
-        <h3 className={styles.title}> Filmes para assistir </h3>
+        <div className={styles.form}>
 
 
-        <form className={styles.formulario} onSubmit={id ? editar : adicionar}>
-          <input
-            required
-            value={titulo}
-            onChange={(event) => setTitulo(event.target.value)}
-            placeholder="Titulo" />
 
-          {/*TARGET - para que o valor a ser editado seja localizado  */}
-          <select value={categoria} onChange={(event) => setCategoria(event.target.value)} >
+          <form className={styles.formulario} onSubmit={id ? editar : adicionar}>
+          <h3 className={styles.title}> Filmes para assistir </h3>
+            <input className={styles.input}
+              required
+              value={titulo}
+              onChange={(event) => setTitulo(event.target.value)}
+              placeholder="Titulo" />
 
-            <option value="" disabled>Selecione o gênero</option>
-            <option value="Ação e aventura">Ação e aventura</option>
-            <option value="Comédia">Comedia</option>
-            <option value="Drama">Drama</option>
-            <option value="Ficção científica">Ficção científica</option>
-            <option value="Romance">Romance</option>
-            <option value="Terror">Terror</option>
-          </select>
-          <input requered value={data} type="date"
-            placeholder="Data" onChange={(event) => setData(event.target.value)} />
+            {/*TARGET - para que o valor a ser editado seja localizado  */}
+            <select className={styles.input} value={categoria} onChange={(event) => setCategoria(event.target.value)} >
 
-          <input requered value={descricao} type="textarea"
-            placeholder="Descricao" onChange={(event) => setDescricao(event.target.value)} />
+              <option value="" disabled>Selecione o gênero</option>
+              <option value="Ação e aventura">Ação e aventura</option>
+              <option value="Comédia">Comedia</option>
+              <option value="Drama">Drama</option>
+              <option value="Ficção científica">Ficção científica</option>
+              <option value="Romance">Romance</option>
+              <option value="Terror">Terror</option>
+            </select>
 
-          <input type="submit" value={id ? "Salvar" : "Cadastrar"} />
+            <input className={styles.input} requered value={descricao} type="textarea"
+              placeholder="Descricao" onChange={(event) => setDescricao(event.target.value)} />
+            <input className={styles.input} requered value={data} type="date"
+              placeholder="Data" onChange={(event) => setData(event.target.value)} />
 
-        </form>
-      </div>
+            <input className={styles.submit} type="submit" value={id ? "Salvar" : "Cadastrar"} />
+
+
+          </form>
+        </div>
       </container>
-      
-        {/*retorno de dados salvos*/}
-        {listaCategoria.length > 0 ?
-          (
-            <ul className={styles.card}>
-              {listaCategoria.map((item) =>
-              (
-                <li key={item.id} >
-                  <p >{item.titulo} </p>
-                  <p >{item.data} </p>
-                  <p >{item.categoria} </p>
-                  <p >{item.descricao} </p>
-                  <button onClick={() => apagar(item.id)}>Apagar </button>
-                  <button onClick={() => preencher(item)}>Editar </button>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p >Nenhuma categoria cadastrada</p>
-          )}
-      
+
+      {/*retorno de dados salvos*/}
+      {listaCategoria.length > 0 ?
+        (
+          <ul >
+            {listaCategoria.map((item) =>
+            (
+              <li className={styles.card} key={item.id} >
+                <p className={styles.titulo} >{item.titulo} </p>
+                <p className={styles.data} >{item.data} </p>
+                <p >{item.categoria} </p>
+                <p >{item.descricao} </p>
+                <button className={styles.buttonEdit} onClick={() => preencher(item)}><AiOutlineEdit /> </button>
+                <button className={styles.buttonDelete} onClick={() => apagar(item.id)}><BsTrash2 /></button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p >Nenhuma categoria cadastrada</p>
+        )}
+
     </div>
 
   )
