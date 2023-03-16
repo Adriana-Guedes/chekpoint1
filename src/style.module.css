@@ -1,162 +1,158 @@
 .app {
-    font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-    display: grid;
-    justify-items: stretch;
-    position: absolute;
-    width: 482px;
-    height: 1117px;
-    left: 0px;
-    top: 0px;
+  display: grid;
+  justify-items: stretch;
+  position: absolute;
+  width: 482px;
+  height: 1117px;
+  left: 0px;
+  top: 0px;
 
-    background: #102766;
+  background: #102766;
 }
 
 .form {
-    display: flex;
-    background-image: linear-gradient(120deg, #ffffff, #a8a8a8);
+  display: flex;
+  background-image: linear-gradient(120deg, #ffffff, #a8a8a8);
 
-    position: absolute;
-    justify-items: stretch;
-    align-items: center;
+  position: absolute;
+  justify-items: stretch;
+  align-items: center;
 
-    width: 343px;
-    height: 400px;
-    left: 69px;
-    top: 10%;
+  width: 343px;
+  height: 400px;
+  left: 69px;
+  top: 10%;
 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-
-
+  display: flex;
+  justify-content: center;
 }
 
 .input {
+  border: 0;
+  border-radius: 5px;
+  background-image: linear-gradient(120deg, #b1c6ff, #4577ff);
+  color: black;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-size: 17px;
+  transition: all 1s;
+  max-width: 170px;
+  margin: 2%;
+  margin-left: 25%;
+}
 
-    border: 0;
-    border-radius: 5px;
-    background-image: linear-gradient(120deg, #b1c6ff, #4577ff);
-    color: black;
-    cursor: pointer;
-    padding: 7px 12px;
-    font-size: 17px;
-    transition: all 1s;
-    max-width: 170px;
-    margin: 2%;
-    margin-left: 25%;
-
+.warning {
+  color: red;
+  font-size: 12px;
+  display: block;
+  text-align: center;
 }
 
 .input:focus {
-    /* outline-color: lightcoral;
+  /* outline-color: lightcoral;
  */
-    outline-color: rgb(127, 170, 170);
+  outline-color: rgb(127, 170, 170);
 }
 
 .submit {
-    display: flex;
-    justify-content: center;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 2%;
-    margin-left: 30%;
+  display: flex;
+  justify-content: center;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 2%;
+  margin-left: 30%;
 }
 
 .submit:hover {
-    background: #534bf3;
+  background: #534bf3;
 }
 
-
-.tituloPagina{
-    display:flex;
-    justify-content: center; 
-    align-items: center;
-    width: 250%;
-    height: 15%;
-    
+.tituloPagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250%;
+  height: 15%;
 }
-.vazio{
-    padding-left: 2%;
-    position: relative;  
-    left: 529px;
-    top: 129px;  
+.vazio {
+  padding-left: 2%;
+  position: relative;
+  left: 529px;
+  top: 129px;
 }
 
 /* ----------------------O QUE SERÀ--------------------------------------- */
 
 .card {
-    
-    border-radius: 5px;
-    background: lightgrey;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-    padding-top: 1rem;
-    padding-left: 2rem ;
-    position: relative;
-    width: 55rem;
-    height: 114px;
-    left: 529px;
-    top: 129px;
-    margin: 20px;
-    list-style: none;
+  border-radius: 5px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  width: 55rem;
+  height: 114px;
+  left: 529px;
+  top: 129px;
+  margin: 20px;
+  list-style: none;
 }
 
 .data {
-    position: absolute;
-    right: 0px;
-    margin-right: 20px;
-    font-weight: bold;
-    text-shadow: 1px 1px white, -1px -1px #444
+  position: absolute;
+  right: 0px;
+  margin-right: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px white, -1px -1px #444;
 }
 
 .titulo {
-    font-weight: bold;
-    text-shadow: 1px 1px white, -1px -1px #444
+  font-weight: bold;
+  text-shadow: 1px 1px white, -1px -1px #444;
 }
 
 .buttonEdit {
-    position: absolute;
-    right: 30px;
-    margin-right: 20px;
-    
-    size: 50px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: blue;
-    background: none;
-    border: 0;
+  position: absolute;
+  right: 30px;
+  margin-right: 20px;
 
+  size: 50px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: blue;
+  background: none;
+  border: 0;
 }
 
-
 .buttonDelete {
-    position: absolute;
-    right: 0px;
-    margin-right: 20px;
-    size: 50px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: red;
-    border: 0;
-    background: none;
-
-
+  position: absolute;
+  right: 0px;
+  margin-right: 20px;
+  size: 50px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: red;
+  border: 0;
+  background: none;
 }
