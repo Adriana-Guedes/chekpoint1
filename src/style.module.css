@@ -79,7 +79,9 @@
   margin-left: 30%;
 }
 
-
+.submit:hover {
+  background: #534bf3;
+}
 
 .tituloPagina {
   display: flex;
